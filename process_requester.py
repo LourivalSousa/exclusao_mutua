@@ -23,12 +23,12 @@ def enviar_mensagem(process, mensagem):
 def entrar_secao_critica(process):
     with open("resultado.txt", "a") as arquivo:
         hora_atual = time.strftime("%Y-%m-%d %H:%M:%S.%f")
-        arquivo.write(f"Processo {process.id_processo} entrou na seção crítica no horario: {hora_atual}\n")
+        arquivo.write(f"Processo {process.pid} entrou na seção crítica no horario: {hora_atual}\n")
 
 def sair_secao_critica(process):
     with open("resultado.txt", "a") as arquivo:
         current_time = time.strftime("%Y-%m-%d %H:%M:%S.%f")
-        arquivo.write(f"Processo {process.id_processo} saiu da seção crítica no horario {current_time}\n")
+        arquivo.write(f"Processo {process.pid} saiu da seção crítica no horario {current_time}\n")
 
 if __name__ == "__main__":
     quant_process = int(input("Insira a quantidade de processos: \n"))
