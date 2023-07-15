@@ -12,7 +12,7 @@ def iniciar(process,loops, k):
         sair_secao_critica(process)
 
 def solicitar_secao_critica(process):
-    mensagem = f"1-{process['pid']}|".ljust(process['size'], '0')
+    mensagem = f"1-{process['pid']}|".ljust(process['message_size'], '0')
     enviar_mensagem(process,mensagem)
 
 def enviar_mensagem(process, mensagem):
