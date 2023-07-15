@@ -27,7 +27,7 @@ def handle_conections():
       thread_client = threading.Thread(target=handle_process, args=(client,))
       thread_client.start()
   
-def handle_process(self, client):
+def handle_process(client):
   pid = client.recv(1024).decode()
   process[pid] = client
   lock.acquire()
