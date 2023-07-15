@@ -35,7 +35,6 @@ if __name__ == "__main__":
     quant_process = int(input("Insira a quantidade de processos: \n"))
     k = int(input("Insira o valor de k, o formato deve ser em segundos.: \n"))
     repet = int(input("Insira a quantidade de repeticoes: \n"))
-    size = int(input("Insira em bytes o tamanho das mensagens: \n"))
 
     process_array = []
 
@@ -47,7 +46,6 @@ if __name__ == "__main__":
         process["pid"] = pid
         process["ip"] = "192.168.0.117"
         process["port"] = 5000
-        process["message_size"] = size
 
         process_array.append(process)
 

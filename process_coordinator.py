@@ -24,7 +24,7 @@ def handle_conections():
 
   while True:
       client, client_addr = server.accept()
-      thread_client = threading.Thread(target=handle_process, args=(client,))
+      thread_client = threading.Thread(target=handle_process, args=(client))
       thread_client.start()
   
 def handle_process(client):
