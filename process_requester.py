@@ -4,6 +4,7 @@ import time
 
 def iniciar(process,loops, k):
     for _ in range(loops):
+        print(process)
         solicitar_secao_critica(process)
         entrar_secao_critica(process)
 
