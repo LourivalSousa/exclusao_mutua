@@ -16,7 +16,7 @@ def solicitar_secao_critica(process):
 
 def enviar_mensagem(process, mensagem):
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client.connect((process.ip_coordenador, process.porta_coordenador))
+    client.connect((process.ip, process.port))
     client.sendall(mensagem.encode())
     client.close()
 
@@ -43,10 +43,10 @@ if __name__ == "__main__":
         
         process = {}
 
-        process["id_processo"] = pid
-        process["ip_coordenador"] = "192.168.0.117"
-        process["porta_coordenador"] = 5000
-        process["tamanho_mensagem"] = size
+        process["pid"] = pid
+        process["ip"] = "192.168.0.117"
+        process["port"] = 5000
+        process["message_size"] = size
 
         process_array.append(process)
 
